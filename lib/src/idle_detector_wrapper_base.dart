@@ -305,14 +305,8 @@ class IdleDetectorState extends State<IdleDetector> {
           }
         },
         child: GestureDetector(
-          behavior: HitTestBehavior.opaque,
-          onTap: () {
-            handleUserInteraction();
-          },
-          onPanDown: (details) {
-            handleUserInteraction();
-          },
-          onPanUpdate: (details) {
+          behavior: HitTestBehavior.translucent,
+          onTapDown: (_) {
             handleUserInteraction();
           },
           child: widget.detectKeyboardActivity
